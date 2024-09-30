@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>급하게 만든 뤅키 드뤄우</title>
+    <link rel="stylesheet" href="pokjuk.css">
+    <script src="pokjuk.js" defer></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: none;
+            object-fit: cover; /* 비디오 비율을 유지하며 화면에 맞게 조정 */
+        }
+
+        @keyframes scaleUp {
+            0% {
+                transform: translate(-50%, -50%) scale(1); /* 원래 위치에서 시작 */
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.5); /* 중앙에서 커지게 설정 */
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1); /* 다시 원래 크기로 돌아옴 */
+            }
+        }
+
+
+        @keyframes grow {
+            0% {
+                transform: scale(0.2); /* 작게 시작 */
+                opacity: 0; /* 처음에는 보이지 않도록 설정 */
+            }
+            100% {
+                transform: scale(1); /* 원래 크기로 돌아옴 */
+                opacity: 1; /* 완전히 보이도록 설정 */
+            }
+        }
+
+        #countdown {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: white;
+            font-size: 8vw; /* 반응형 글자 크기 */
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform-origin: center;
+        }
+
+        #randomNumbers {
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            color: white;
+            font-size: 8vw; /* 반응형 글자 크기 */
+            z-index: 9999;
+            transform: translate(-50%, 0);
+        }
+
+        #startButton {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            width: 15vw; /* 반응형 버튼 너비 */
+            height: 8vh; /* 반응형 버튼 높이 */
+            border-radius: 10px;
+            border: none;
+            background-color: rgb(100, 149, 255);
+            color: white;
+            font-weight: bolder;
+            font-size: 1.5vw; /* 반응형 버튼 글자 크기 */
+            cursor: pointer;
+        }
+
+        /* 버튼 호버 효과 */
+        #startButton:hover {
+            background-color: rgb(70, 130, 180); /* 호버 시 색상 변경 */
+        }
+    </style>
+</head>
+<body>
+    <video id="mtVideo" muted autoplay loop>
+        <source src="fire.mp4" type="video/mp4">
+        브라우저가 비디오 태그를 지원하지 않습니다.
+    </video>
+    <div id="countdown">10</div>
+    <div id="randomNumbers">
+        <!-- 랜덤 숫자가 여기 표시됩니다. -->
+    </div>
+
+    <button id="startButton">럭키 드로우 시작!</button>
+</body>
+</html>

@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+.firework {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+h1 {
+  font-size: 100px;
+  color: white;
+}
+
+
+
+.scale-up {
+  animation: scaleUp 0.3s ease-in-out; 
+}
+
+@keyframes scaleUp {
+  0% {
+      transform: scale(1); 
+  }
+  50% {
+      transform: scale(1.5);
+  }
+  100% {
+      transform: scale(1); 
+  }
+}
+
+
+
