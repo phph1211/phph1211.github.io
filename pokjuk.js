@@ -42,7 +42,7 @@ function startCountdown() {
 function generateRandomNumbers() {
     const randomNumbers = new Set();
     while (randomNumbers.size < 3) {
-        const randomNumber = Math.floor(Math.random() * (294 - 174 + 1)) + 174;
+        const randomNumber = Math.floor(Math.random() * (297 - 175 + 1)) + 175;
         randomNumbers.add(randomNumber);
     }
     randomNumbersElement.classList.add('grow');
@@ -50,7 +50,6 @@ function generateRandomNumbers() {
     randomNumbersElement.innerText = "🎊축하합니다🎊  \n" + Array.from(randomNumbers).join(', '); // 랜덤 숫자 표시
 
     // 랜덤 숫자가 보이도록 애니메이션 추가
-
     setTimeout(() => {
         randomNumbersElement.classList.remove('grow');
     }, 500); // 애니메이션이 끝나는 시간
