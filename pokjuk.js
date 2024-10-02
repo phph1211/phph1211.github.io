@@ -42,7 +42,7 @@ function startCountdown() {
 function generateRandomNumbers() {
     const randomNumbers = new Set();
     while (randomNumbers.size < 3) {
-        const randomNumber = Math.floor(Math.random() * (300 - 100 + 1)) + 100;
+        const randomNumber = Math.floor(Math.random() * (294 - 174 + 1)) + 174;
         randomNumbers.add(randomNumber);
     }
     randomNumbersElement.classList.add('grow');
