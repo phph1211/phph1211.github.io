@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./styled.css" />
+    <link rel="stylesheet" href="./styles.css" />
     <script src="./index.js" defer></script>
   </head>
   <body>
@@ -13,16 +13,15 @@
       <span id="text2"></span>
     </div>
 
+    <div id="overlay"></div>
+
     <svg id="filters">
       <defs>
         <filter id="threshold">
           <feColorMatrix
             in="SourceGraphic"
             type="matrix"
-            values="1 0 0 0 0
-                  0 1 0 0 0
-                  0 0 1 0 0
-                  0 0 0 255 -140"
+            values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 255 -140"
           />
         </filter>
       </defs>
